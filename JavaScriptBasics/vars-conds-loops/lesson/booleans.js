@@ -1,4 +1,4 @@
-// Bolean expressions
+// Boolean expressions
 
 // Compare the value
 console.log(5 == '5');

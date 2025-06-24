@@ -7,13 +7,13 @@ function vowelCount(str){
     let lowerStr = str.toLowerCase();
     let vCount = {};
 
-    vowels.forEach((wowel) => {
+    vowels.forEach((vowel) => {
         let count = 0;
         for (char of lowerStr){
-            if (char === wowel){
+            if (char === vowel){
                 count++;
             }
-            vCount[wowel] = count;
+            vCount[vowel] = count;
         }
     })
     return vCount;

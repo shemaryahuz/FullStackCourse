@@ -1,7 +1,14 @@
 // Mark matrix diagonals
 
 function getMatrix(length){
-    return []
+    let matx = [];
+    for (let i = 0; i < length; i++){
+        matx.push([]);
+        for (let j = 0; j < length; j++){
+            matx[i].push('O');
+        }
+    }
+    return matx;
 }
 
 function showMatrix(matrix){
@@ -10,10 +17,7 @@ function showMatrix(matrix){
     }
 }
 
-let matrix = [ ['A', 'B', 'C'],
-               ['D', 'E', 'F'],
-               ['G', 'H', 'I'] 
-            ];
+let matrix = getMatrix(3);
 
 console.log('Matrix:');
 showMatrix(matrix);

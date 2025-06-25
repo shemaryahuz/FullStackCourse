@@ -134,3 +134,98 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Build outputs (additional common patterns)
+build/
+lib/
+dist/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+
+# Storybook build output
+storybook-static/
+
+# Jest coverage
+coverage/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+
+# Playwright
+test-results/
+playwright-report/
+
+# Local environment files (additional patterns)
+.env.*.local
+
+# Turbo
+.turbo
+
+# Vercel
+.vercel
+
+# Sentry
+.sentryclirc
+
+# Rush
+common/temp/
+
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+
+# Netlify
+.netlify/
+
+# Local Netlify folder
+.netlify
+
+# AWS Amplify
+amplify/
+awsconfiguration.json
+amplifyconfiguration.json
+
+# Package manager lock files - KEEP THESE COMMITTED
+# Uncomment the lines below ONLY if you want to ignore lock files
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Local configuration
+.envrc
+.direnv/

@@ -59,7 +59,7 @@ console.log(filterLargSums(arrays, 30));
 console.log(filterLargSums(obj));
 
 /*
-Output:
+Outputs:
 
 from line 58:
 [
@@ -73,4 +73,51 @@ undefined
 */
 
 
-// Exercise 4: 
+// Exercise 4: Summary Stats 
+
+function averageSafe(arr){
+    try{
+        const numbers = extractNumbers(arr);
+        return sumNumbersSafe(numbers) / numbers.length;
+    }
+    catch(err){
+        console.error(err.message);
+    }
+}
+
+function summaryStats(arrList){
+    try{
+        const states = [];
+        const largeSums = filterLargSums(arrList, 30);
+        largeSums.forEach(function(arr) {
+            let numsSum = sumNumbersSafe(arr);
+            let numsAvg = averageSafe(arr);
+            states.push({sum: numsSum, average: numsAvg});
+        })
+        return states;
+    }
+    catch(err){
+        console.error(err.message);
+    }
+}
+
+const array4 = ["str", null, 2, true, undefined];
+const arrays2 = [array, array2, array3, array4];
+const invalidArray = [arrays, "invalid", undefined];
+
+console.log(summaryStats(arrays2));
+console.log(summaryStats(invalidArray));
+/*
+Outputs:
+
+from line 108:
+[ { sum: 99, average: 24.75 }, { sum: 57, average: 19 } ]
+
+from line 109:
+Error: invalid is string. Error messag: arr.filter is not a function
+Cannot read properties of undefined (reading 'forEach')
+Error: undefined is undefined. Error messag: Cannot read properties of undefined (reading 'filter')
+Cannot read properties of undefined (reading 'forEach')
+[]
+
+*/

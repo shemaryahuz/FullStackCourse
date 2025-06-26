@@ -1,0 +1,9 @@
+// Riddle 5: Many Meanings
+
+
+export default{
+    id: 5,
+    name: "Many Meanings",
+    question: "What comes once in a minute, twice in a moment, but never in a thousand years?",
+    answer: "m"
+};

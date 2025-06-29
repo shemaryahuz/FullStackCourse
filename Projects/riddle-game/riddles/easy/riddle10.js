@@ -1,9 +1,11 @@
-// Riddle 5: Many Meanings
+// Riddle 10: Many Meanings
 
 
 export default{
-    id: 5,
+    level: "easy",
+    id: 10,
     name: "Many Meanings",
     question: "What comes once in a minute, twice in a moment, but never in a thousand years?",
-    answer: "m"
+    answer: "m",
+    hint: "Look at the letters in the words."
 };

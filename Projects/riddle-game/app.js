@@ -1,22 +1,21 @@
 // Riddle Game Application
-import riddles from "./riddles/riddles.js";
-import Riddle from "./classes/Riddle.js"
+import allRiddles from "./riddles/riddles.js";
 import Player from "./classes/Player.js";
 import {question} from "readline-sync"
+import askRiddles from "./functions/main.js"
 
 console.log("=== Welcome to the Riddle Game ===");
 
 const name = question("Please enter your name: ")
 const player = new Player(name);
 
-askRiddles();
-player.showState();
+const level = question("Choose game level (all/ multi-choices/ easy/ medium/ hard): ")
 
+const riddles = allRiddles.filter((riddle) => riddle.level === level);
 
-function askRiddles(){  
-    for (let riddle in riddles){
-        let r = new Riddle(riddles[riddle]); 
-        let time = player.recordTime(() => r.ask());
-        player.times.push(time);
-    }
+if (!riddles){
+    riddles = allRiddles;
 }
+
+askRiddles(player, riddles);
+player.showState();

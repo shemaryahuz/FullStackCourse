@@ -1,8 +1,8 @@
-// Riddle 12 : Endless Chain
+// Riddle 17 : Endless Chain
 
 export default{
     level: "hard",
-    id: 12,
+    id: 17,
     name: "Endless Chain",
     question: "What can you catch but not throw?",
     answer: "cold",

@@ -1,8 +1,8 @@
-// Riddle 14 : Precious When Broken
+// Riddle 19 : Precious When Broken
 
 export default{
     level: "hard",
-    id: 14,
+    id: 19,
     name: "Precious When Broken",
     question: "What is so fragile that saying its name breaks it?",
     answer: "silence",

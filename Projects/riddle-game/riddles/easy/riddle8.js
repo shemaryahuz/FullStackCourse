@@ -1,9 +1,9 @@
-// Riddle 3: Crack to Use
+// Riddle 8: Crack to Use
 
 
 export default{
     level: "easy",
-    id: 3,
+    id: 8,
     name: "Crack to Use",
     question: "What has to be broken before you can use it?",
     answer: "egg",

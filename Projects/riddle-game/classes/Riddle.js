@@ -1,16 +1,16 @@
 // Class to represent a Riddle
 import {question} from "readline-sync"
 
-function getAnswer(){
+export function getAnswer(){
     return question("Enter your answer: ");
 }
 
-function showWrong(){
+export function showWrong(){
     console.log("Wrong answer, try again.");
     console.log("");
 }
 
-function showCorrect(){
+export function showCorrect(){
     console.log("");
     console.log("Well done! Correct answer.");
     console.log("");

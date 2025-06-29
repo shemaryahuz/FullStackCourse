@@ -1,9 +1,9 @@
-// Riddle 1: Clapless Time
+// Riddle 6: Clapless Time
 
 
 export default{
     level: "easy",
-    id: 1,
+    id: 6,
     name: "Clapless Time",
     question: "What has hands but can't clap?",
     answer: "clock",

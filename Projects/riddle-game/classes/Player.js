@@ -7,9 +7,9 @@ export default class Player{
         this.name = name;
         this.times = [];
     };
-    recordTime(askFnunc){
+    recordTime(askFunc){
         const start = new Date().getTime();
-        askFnunc();
+        askFunc();
         const end = new Date().getTime();
         return (end - start) / 1000;
     };

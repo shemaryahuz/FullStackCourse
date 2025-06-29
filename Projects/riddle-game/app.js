@@ -11,7 +11,7 @@ const player = new Player(name);
 
 const level = question("Choose game level (all/ multi-choices/ easy/ medium/ hard): ")
 
-const riddles = allRiddles.filter((riddle) => riddle.level === level);
+let riddles = allRiddles.filter((riddle) => riddle.level === level);
 
 if (!riddles.length){
     riddles = allRiddles;

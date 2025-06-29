@@ -2,8 +2,10 @@
 
 
 export default{
+    level: "easy",
     id: 3,
     name: "Crack to Use",
     question: "What has to be broken before you can use it?",
-    answer: "egg"
+    answer: "egg",
+    hint: "Breakfast ingredient."
 };

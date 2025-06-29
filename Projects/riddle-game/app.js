@@ -13,7 +13,7 @@ const level = question("Choose game level (all/ multi-choices/ easy/ medium/ har
 
 const riddles = allRiddles.filter((riddle) => riddle.level === level);
 
-if (!riddles){
+if (!riddles.length){
     riddles = allRiddles;
 }
 

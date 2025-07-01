@@ -5,15 +5,6 @@ import {question} from "readline-sync";
 
 const DATA_PATH = "./data/users.txt";
 
-class User{
-    constructor(username){
-        this.username = username;
-    }
-    changeUsername(newName){
-        this.username = newName;
-    }
-}
-
 showWelcome();
 menu();
 
@@ -59,7 +50,7 @@ function manageUsers(action){
             case "1":
                 try {
                     const username = question("Enter username to create: ");
-                    users.push(new User(username));
+                    users.push({username: username});
                     const usersStr = JSON.stringify(users);
                     fs.writeFile(DATA_PATH, usersStr, (err) => {
                         if (err){

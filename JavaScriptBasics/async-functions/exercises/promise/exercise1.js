@@ -2,7 +2,7 @@
 // Delated greet
 
 function delayedGreet(name, delaySeconds){
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         setTimeout(() => {
             resolve("Hello " + name + "!");
         }, delaySeconds * 1000);

@@ -1,7 +1,7 @@
 // Basic http server
 
 import {createServer} from "http";
-const server = createServer((req, res) => {
+const server = createServer(async(req, res) => {
     // req = requestIncomingMessage;
     // res = responseServerObject;
     console.log(req.url); // '/'

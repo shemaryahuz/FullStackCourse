@@ -45,7 +45,7 @@ app.post("/action", async (req, res) => {
         res.send(joke);
     }
     if (data.action === "cat fact"){
-        const catImagesLength = await getCatImagesLength();
+        const catImagesLength = await getCatImagesLength(100);
         res.send(catImagesLength);
     }
     res.status(400).send({"msg": "invalid action"});
@@ -71,9 +71,9 @@ async function getJokeUppercase() {
     }
 }
 
-async function getCatImagesLength() {
+async function getCatImagesLength(length) {
     try {
-        const url = "https://api.thecatapi.com/v1/images/search?limit=20";
+        const url = `https://api.thecatapi.com/v1/images/search?limit=${length}`;
         const api_key = process.env.CAT_API_KEY;
         const request = {
             headers: { "x-api-key":api_key}

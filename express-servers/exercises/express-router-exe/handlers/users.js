@@ -46,7 +46,7 @@ export function updateUser(req, res){
     const { name } = req.body;
     if (!name){
     // if request not in the expected format - { "name" : "some name" }, response with msg of 'body is malformed'
-    res.status(404).json({ msg: "body is malformed"})
+    res.status(404).json({ msg: "body is malformed" })
     }
     // destruct id from request params
     const { id } = req.params;
@@ -58,5 +58,20 @@ export function updateUser(req, res){
         }
     }
     // if not found, response with message 'id <id> not found' and status code of not found
-    res.status(404).json({ msg: `id ${id} not found`});
+    res.status(404).json({ msg: `id ${id} not found` });
+}
+
+export function deleteUser(req, res){
+    // destruct id from request params
+    const { id } = req.params; 
+    for (let i = 0; i < users.length - 1; i++){
+        // if user.id is equal to id, delete the user and response with message and status code 200 to response
+        if (users[i].id === id){
+            const name = users[i].name;
+            users.splice(i, 1);
+            res.status(200).json({ msg: `user '${name}' deleted` });
+        }
+    }
+    // if not found, response with message 'id <id> not found' and status code of not found
+    res.status(404).json({ msg: `id ${id} not found` });
 }

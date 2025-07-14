@@ -15,7 +15,7 @@ const sequelize = new Sequelize(
 
 sequelize.sync({force: true});
 
-const User = sequelize.define(
+export const User = sequelize.define(
     "User",
     {
         id:{
@@ -37,7 +37,7 @@ const User = sequelize.define(
     }
 );
 
-const Post = sequelize.define(
+export const Post = sequelize.define(
     "Post",
     {
         id:{

@@ -5,14 +5,14 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch app.js"
+    "start": "node --watch --env-file=.env app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "dotenv": "^17.2.0",
+    "@supabase/supabase-js": "^2.51.0",
     "express": "^5.1.0"
   }
 }

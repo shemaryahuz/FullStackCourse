@@ -1,11 +1,13 @@
 import express from "express";
-import router from "./routes/router.js";
+import loginRoute from "./routes/loginRoute.js";
 
 const app = express();
 
-app.use("/", router);
+app.use(express.json());
+app.use("/login", loginRoute)
 
 const PORT = process.env.PORT;
+
 
 app.listen(PORT, (error) => {
     if (error) console.log(`Error running: ${error}`);

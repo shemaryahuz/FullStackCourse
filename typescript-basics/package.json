@@ -1,18 +1,18 @@
 {
-  "name": "mysql-sequelize",
+  "name": "typescript",
   "version": "1.0.0",
-  "main": "app.js",
-  "type": "module",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch app.js"
+    "start": "nodemon --exec ts-node lessons/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "dotenv": "^17.2.0",
-    "express": "^5.1.0"
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }

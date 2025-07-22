@@ -1,9 +1,11 @@
 import express from "express";
+import cookieParser from "cookie-parser";
 import { signup, signin } from "./controllers/controllers.js";
 
 const app = express();
 
 app.use(express.json());
+app.use(cookieParser());
 
 app.post("/signup", signup);
 app.post("/signin", signin);

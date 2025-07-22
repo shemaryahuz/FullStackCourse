@@ -1,4 +1,5 @@
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken"; 
 import { addUser, getUser } from "../dal/dal.js";
 
 export async function signup(req, res) {
@@ -24,11 +25,19 @@ export async function signup(req, res) {
         res.status(500).send({ error: "error creating user" });
         return;
     }
+    const payload = {
+        username: username
+    }
+    const secretKey = process.env.SECRET_KEY;
+    const token = jwt.sign(payload, secretKey);
     user.insertedId = insertedId;
+    res.cookie("token", token);
     res.send({ message: "user with hashed password created successfully", user: user });
 }
 
 export async function signin(req, res) {
+    console.log(req.cookies);
+    console.log(res.cookies);
     // destruct username and password from body
     const { username, password } = req.body;
     if (!username || !password) {

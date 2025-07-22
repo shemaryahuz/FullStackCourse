@@ -1,4 +1,4 @@
-import { hash } from "bcrypt";
+import bcrypt from "bcrypt";
 import { addUser, getUser } from "../dal/dal.js";
 
 export async function signup(req, res) {
@@ -14,7 +14,7 @@ export async function signup(req, res) {
         res.status(409).send({ error: "user already exists" });
         return;
     }
-    const hashedPassword = await hash(password, 10);
+    const hashedPassword = await bcrypt.hash(password, 10);
     user = {
         username: username,
         password: hashedPassword
@@ -40,4 +40,9 @@ export async function signin(req, res) {
         res.status(404).send({ error: "user not found" });
         return;
     }
+    const match = await bcrypt.compare(password, user.password);
+    if (!match){
+        res.status(404).send( { error: "wrong password"} );
+    }
+    res.send({ message: "you have signed in successfully" });
 }

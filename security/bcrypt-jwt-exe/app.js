@@ -1,11 +1,12 @@
 import express from "express";
-import { signup } from "./controllers/controllers.js";
+import { signup, signin } from "./controllers/controllers.js";
 
 const app = express();
 
 app.use(express.json());
 
 app.post("/signup", signup);
+app.post("/signin", signin);
 
 
 const PORT = process.env.PORT || 3000;

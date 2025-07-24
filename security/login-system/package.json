@@ -2,9 +2,10 @@
   "name": "login-system",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./client/app.js; node --watch ./server/sever.js"
+    "start": "node --watch ./server/server.js"
   },
   "keywords": [],
   "author": "",

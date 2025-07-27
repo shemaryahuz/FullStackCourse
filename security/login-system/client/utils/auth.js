@@ -1,5 +1,5 @@
 
 
-export async function showMenuByRole(params) {
+export async function showMenuByRole(role) {
     
 }

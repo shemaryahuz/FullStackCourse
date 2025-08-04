@@ -2,7 +2,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { createUser, getUserByUsername } from "../dal/userDAL.js";
 
-export async function signup(req, res, next) {
+export async function signup(req, res) {
     try {
         const { username, password, role = "user" } = req.body;
         if (!username || !password){
@@ -33,7 +33,7 @@ export async function login(req, res) {
     try {
         const { username, password } = req.body;
         if (!username || !password){
-            return res.status(400).json( { message: "Username and password are required"})
+            return res.status(400).json( { message: "Username and password are required"});
         }
         const user = await getUserByUsername(username);
         if (!user){
@@ -59,6 +59,6 @@ export async function login(req, res) {
         res.json({ message: "User logged in successfully", user: userForToken });
 
     } catch (error) {
-        res.status(500).json({ message: "Error creating user", error: error.message })
+        res.status(500).json({ message: "Error creating user", error: error.message });
     }
 }

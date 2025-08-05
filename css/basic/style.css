@@ -1,0 +1,29 @@
+h1 {
+    color: blue
+}
+
+h2 {
+    color: green
+}
+
+p {
+    border-color: black;
+    border-style: outset;
+}
+
+#p1 {
+    background-color: blue;
+    color: rgb(4, 4, 91)
+}
+
+#p2 {
+    background-color: green;
+    color: rgb(2, 54, 2)
+}
+
+#p3 {
+    background-color: purple;
+    color: rgb(40, 1, 40)
+}
+
+

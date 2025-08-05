@@ -10,6 +10,16 @@
 
         <fieldset>
             <legend>Personal Information</legend>
+
+            <label for="name">Full Name</label>
+            <input type="text" name="name" id="name" required minlength="2">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
         </fieldset>
 
         <fieldset>
@@ -23,7 +33,9 @@
         <fieldset>
             <legend>Agreements</legend>
         </fieldset>
-        
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Register">
     </form>
 </body>
 </html>

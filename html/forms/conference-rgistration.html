@@ -1,41 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conference Registration</title>
-</head>
-<body>
+  </head>
+  <body>
+    <h1>Conference Registration</h1>
+
     <form action="" method="get">
+      <fieldset>
+        <legend>Personal Information</legend>
 
-        <fieldset>
-            <legend>Personal Information</legend>
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+          minlength="2"
+          placeholder="Enter Full Name"
+        />
 
-            <label for="name">Full Name</label>
-            <input type="text" name="name" id="name" required minlength="2">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="Enter Email Address"
+        />
 
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
+        <label for="phone">Phone</label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          required
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          placeholder="123-456-7890"
+        />
+      </fieldset>
 
-            <label for="phone">Phone</label>
-            <input type="tel" name="phone" id="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+      <fieldset>
+        <legend>Tiket & Workshops</legend>
 
-        </fieldset>
+        <label for="tiket-type">Tiket Type</label>
+        <select name="tiket-type" id="tiket-type">
+          <option value="standard">Standard</option>
+          <option value="vip">VIP</option>
+          <option value="student">Student</option>
+        </select>
 
-        <fieldset>
-            <legend>Tiket & Workshops</legend>
-        </fieldset>
+        <br />
 
-        <fieldset>
-            <legend>Payment Details</legend>
-        </fieldset>
+        <legend>Workshops:</legend>
 
-        <fieldset>
-            <legend>Agreements</legend>
-        </fieldset>
+        <label for="web-performance">Web Performance</label>
+        <input type="checkbox" name="workshops" id="web-performance" />
 
-        <input type="reset" value="Reset">
-        <input type="submit" value="Register">
+        <label for="accessibility">Accessibility</label>
+        <input type="checkbox" name="workshops" id="accessibility" />
+
+        <label for="testing">Testing</label>
+        <input type="checkbox" name="workshops" id="testing" />
+
+        <br />
+
+        <legend>Dietary Requirements:</legend>
+
+        <label for="none">None</label>
+        <input type="radio" name="diet" id="none" checked />
+
+        <label for="vegan">Vegan</label>
+        <input type="radio" name="diet" id="vegan" />
+
+        <label for="kosher">Kosher</label>
+        <input type="radio" name="diet" id="kosher" />
+
+        <label for="halal">Halal</label>
+        <input type="radio" name="diet" id="halal" />
+
+        <label for="other">Other</label>
+        <input type="radio" name="diet" id="other-radio" />
+        <input
+          type="text"
+          name="other-text"
+          id="other-text"
+          placeholder="Enter Dietary Requirements"
+        />
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Payment Details</legend>
+      </fieldset>
+
+      <fieldset>
+        <legend>Agreements</legend>
+      </fieldset>
+
+      <input type="reset" value="Reset" />
+      <input type="submit" value="Register" />
     </form>
-</body>
+  </body>
 </html>

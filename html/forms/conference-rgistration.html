@@ -88,7 +88,21 @@
           name="other-text"
           id="other-text"
           placeholder="Enter Dietary Requirements"
+          style="display: none;"
         />
+
+        <script>
+          const otherRadio = document.getElementById("other-radio");
+          const otherText = document.getElementById("other-text");
+
+          otherRadio.addEventListener("change", () => {
+            if (otherRadio.checked) {
+              otherText.style.display = "inline-block";
+            } else {
+              otherText.style.display = "none";
+            }
+          });
+        </script>
 
       </fieldset>
 
@@ -129,7 +143,35 @@
       </fieldset>
 
       <fieldset>
+
         <legend>Agreements</legend>
+
+        <div id="student-id" style="display: none;">
+         <label for="student-id-file"">Student ID</label>
+         <input 
+            type="file" 
+            name="student-id-file" 
+            id="student-id" 
+            required 
+            accept=".pdf, .docx, .jpg" >
+         </input>
+        </div>
+
+        <script>
+            const tiket = document.getElementById("tiket-type");
+            const studentId = document.getElementById("student-id");
+            tiket.addEventListener("change", () => {
+              if (tiket.value === "student") {
+                studentId.style.display = "inline-block";
+              } else {
+                studentId.style.display = "none";
+              }
+            });
+        </script>
+
+        <label for="terms">I agree to the terms and conditions</label>
+        <input type="checkbox" name="terms" id="terms" required />
+
       </fieldset>
 
       <input type="reset" value="Reset" />

@@ -1,0 +1,40 @@
+/* General body styling */
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+/* Main heading */
+h1 {
+    background-color: #d5f9d4;
+    margin: 0;
+    padding: 15px;
+    font-size: 2.5rem;
+    color: #215c2a;
+    text-align: left;
+}
+
+h1 span {
+    font-weight: bold;
+}
+
+/* Paragraph style under the heading */
+p {
+    background-color: #ffeeee;
+    margin: 0;
+    padding: 10px 15px;
+    font-style: italic;
+    color: #663344;
+    font-size: 1.2rem;
+}
+
+/* Image style */
+img {
+    display: block;
+    margin: 20px auto;
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

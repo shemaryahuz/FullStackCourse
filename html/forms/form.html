@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Form</title>
+  </head>
+  <body>
+    <form
+      id="comprehensive-form"
+      method="get"
+      action="./targrt.html"
+      enctype="multipart/form-data"
+    >
+      <!-- Text Input Fields -->
+      <label for="text-input">Text Input:</label>
+      <input
+        type="text"
+        id="text-input"
+        name="text-input"
+        placeholder="Enter text"
+        required
+      />
+      <br />
+      <label for="email-input">Email Input:</label>
+      <input
+        type="email"
+        id="email-input"
+        name="email-input"
+        placeholder="Enter email"
+        required
+      />
+      <br />
+      <label for="password-input">Password Input:</label>
+      <input
+        type="password"
+        id="password-input"
+        name="password-input"
+        placeholder="Enter password"
+        required
+      />
+      <br />
+      <!-- Number Input Fields -->
+      <label for="number-input">Number Input:</label>
+      <input
+        type="number"
+        id="number-input"
+        name="number-input"
+        min="1"
+        max="10"
+        step="2"
+        required
+      />
+      <br />
+      <label for="range-input">Range Input:</label>
+      <input
+        type="range"
+        id="range-input"
+        name="range-input"
+        min="1"
+        max="10"
+        step="0.5"
+        required
+      />
+      <br />
+      <!-- Date and Time Input Fields -->
+      <label for="date-input">Date Input:</label>
+      <input type="date" id="date-input" name="date-input" required />
+      <br />
+      <label for="time-input">Time Input:</label>
+      <input type="time" id="time-input" name="time-input" required />
+      <br />
+      <label for="datetime-local-input">Date and Time Input:</label>
+      <input
+        type="datetime-local"
+        id="datetime-local-input"
+        name="datetime-local-input"
+        required
+      />
+      <br />
+      <!-- Checkbox and Radio Button Fields -->
+      <label for="checkbox-input">Checkbox Input:</label>
+      <input
+        type="checkbox"
+        id="checkbox-input"
+        name="checkbox-input"
+        checked
+      />
+      <br />
+      <label for="radio-input-1">Radio Button 1:</label>
+      <input
+        type="radio"
+        id="radio-input-1"
+        name="radio-input"
+        value="option-1"
+        required
+      />
+      <br />
+      <label for="radio-input-2">Radio Button 2:</label>
+      <input
+        type="radio"
+        id="radio-input-2"
+        name="radio-input"
+        value="option-2"
+        required
+      />
+      <br />
+      <!-- Select Fields -->
+      <label for="select-input">Select Input:</label>
+      <select id="select-input" name="select-input" required>
+        <option value="">Select an option</option>
+        <option value="option-1">Option 1</option>
+        <option value="option-2">Option 2</option>
+      </select>
+      <br />
+      <!-- File Input Fields -->
+      <label for="file-input">File Input:</label>
+      <input
+        type="file"
+        id="file-input"
+        name="file-input"
+        accept=".pdf, .docx, .jpg"
+        required
+      />
+      <br />
+      <!-- Textarea Fields -->
+      <label for="textarea-input">Textarea Input:</label>
+      <textarea
+        id="textarea-input"
+        name="textarea-input"
+        placeholder="Enter text"
+        required
+      ></textarea>
+      <br />
+      <!-- Button Fields -->
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+      <button type="button">Button</button>
+      <br />
+      <!-- Hidden Fields -->
+      <input
+        type="hidden"
+        id="hidden-input"
+        name="hidden-input"
+        value="Hidden value"
+      />
+    </form>
+  </body>
+</html>

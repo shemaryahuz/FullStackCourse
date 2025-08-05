@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conference Registration</title>
+  </head>
+  <body>
+    <h1>Conference Registration</h1>
+
+    <form action="" method="get">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+          minlength="2"
+          placeholder="Enter Full Name"
+        />
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="Enter Email Address"
+        />
+
+        <label for="phone">Phone</label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          required
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          placeholder="123-456-7890"
+        />
+      </fieldset>
+
+      <fieldset>
+        <legend>Tiket & Workshops</legend>
+
+        <label for="tiket-type">Tiket Type</label>
+        <select name="tiket-type" id="tiket-type">
+          <option value="standard">Standard</option>
+          <option value="vip">VIP</option>
+          <option value="student">Student</option>
+        </select>
+
+        <br />
+
+        <legend>Workshops:</legend>
+
+        <label for="web-performance">Web Performance</label>
+        <input type="checkbox" name="workshops" id="web-performance" />
+
+        <label for="accessibility">Accessibility</label>
+        <input type="checkbox" name="workshops" id="accessibility" />
+
+        <label for="testing">Testing</label>
+        <input type="checkbox" name="workshops" id="testing" />
+
+        <br />
+
+        <legend>Dietary Requirements:</legend>
+
+        <label for="none">None</label>
+        <input type="radio" name="diet" id="none" checked />
+
+        <label for="vegan">Vegan</label>
+        <input type="radio" name="diet" id="vegan" />
+
+        <label for="kosher">Kosher</label>
+        <input type="radio" name="diet" id="kosher" />
+
+        <label for="halal">Halal</label>
+        <input type="radio" name="diet" id="halal" />
+
+        <label for="other">Other</label>
+        <input type="radio" name="diet" id="other-radio" />
+        <input
+          type="text"
+          name="other-text"
+          id="other-text"
+          placeholder="Enter Dietary Requirements"
+          style="display: none;"
+        />
+
+        <script>
+          const otherRadio = document.getElementById("other-radio");
+          const otherText = document.getElementById("other-text");
+
+          otherRadio.addEventListener("change", () => {
+            if (otherRadio.checked) {
+              otherText.style.display = "inline-block";
+            } else {
+              otherText.style.display = "none";
+            }
+          });
+        </script>
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend>Payment Details</legend>
+
+        <label for="card-type">Card Type</label>
+        <select name="card-type" id="card-type">
+          <option value="visa">Visa</option>
+          <option value="mastercard">Mastercard</option>
+          <option value="amex">Amex</option>
+        </select>
+
+        <label for="card-number">Card Number</label>
+        <input
+          type="text"
+          name="card-number"
+          id="card-number"
+          placeholder="1234 5678 9012 3456"
+          pattern="[0-9/s]{13,16}"
+          required
+        />
+
+        <label for="expiration-date">Expiration Date</label>
+        <input type="month" id="expiration-date" required min="2025-08"></input>
+
+        <label for="cvv">CVV</label>
+        <input
+          type="password"
+          name="cvv"
+          id="cvv"
+          placeholder="123"
+          pattern="[0-9]{3}"
+          required
+        />
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend>Agreements</legend>
+
+        <div id="student-id" style="display: none;">
+         <label for="student-id-file"">Student ID</label>
+         <input 
+            type="file" 
+            name="student-id-file" 
+            id="student-id" 
+            required 
+            accept=".pdf, .docx, .jpg" >
+         </input>
+        </div>
+
+        <script>
+            const tiket = document.getElementById("tiket-type");
+            const studentId = document.getElementById("student-id");
+            tiket.addEventListener("change", () => {
+              if (tiket.value === "student") {
+                studentId.style.display = "inline-block";
+              } else {
+                studentId.style.display = "none";
+              }
+            });
+        </script>
+
+        <label for="terms">I agree to the terms and conditions</label>
+        <input type="checkbox" name="terms" id="terms" required />
+
+      </fieldset>
+
+      <input type="reset" value="Reset" />
+      <input type="submit" value="Register" />
+    </form>
+  </body>
+</html>

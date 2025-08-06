@@ -10,6 +10,13 @@
     padding: 50px;
     width: min-content;
 }
+
+.card-elements {
+    padding: 2em;
+    background-color: rgb(119, 187, 247);
+    border-radius: 1em;
+}
+
 img {
     border-radius: 50%;
 }

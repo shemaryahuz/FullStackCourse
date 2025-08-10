@@ -1,0 +1,53 @@
+/* Basic styles for boxes */
+.box {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  margin: 5px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* Different heights to show alignment */
+.small {
+  height: 40px;
+}
+.medium {
+  height: 70px;
+}
+.large {
+  height: 100px;
+}
+
+/* Flex container base style */
+.flex-container {
+  display: flex;
+  border: 2px solid #333;
+  padding: 10px;
+  margin-bottom: 30px;
+  background: #f9f9f9;
+}
+
+/* 1. Center items horizontally */
+.justify-center {
+  justify-content: center; /* Items centered along main axis */
+}
+
+/* 2. Spread items with space between */
+.justify-space-between {
+  justify-content: space-between; /* Even space between items */
+}
+
+/* 3. Align items to flex-end (bottom) */
+.align-flex-end {
+  align-items: flex-end; /* Items aligned to bottom of container */
+  height: auto; /* container height for visible alignment */
+}
+
+/* 4. Stack items vertically */
+.flex-column {
+  flex-direction: column; /* Items arranged top to bottom */
+  justify-content: center;
+  height: 300px;
+}

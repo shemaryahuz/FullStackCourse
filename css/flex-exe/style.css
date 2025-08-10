@@ -13,6 +13,8 @@ main {
     max-width: 50vw;
     height: 90vh;
     background-color: #2C14DD;
+    border-radius: 16px;
+    padding: 20px;
 }
 
 .top {
@@ -26,10 +28,25 @@ main {
 
 .skip-btn {
     background-color: #432DEC;
-    height: 50%;
-    border-radius: 16px;
+    height: 25%;
+    border-radius: 12px;
+    border: none;
+    font-size: 0.6rem;
 }
 
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    background-color: #432DEC;
+    border-radius: 16px;
+    padding: 5px;
+}
 .card-txt {
     font-size: 0.4rem;
 }

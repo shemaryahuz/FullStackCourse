@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selector Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Pseudo Selector Playground</h1>
+
+    <section class="links">
+        <h2>Links</h2>
+        <p>
+            <a href="https://example.com">Unvisited link</a> | 
+            <a href="https://google.com" target="_blank">Visited link</a>
+        </p>
+        <!-- STYLE IDEA: 
+             - Change font/color for visited links
+             - Change background or underline on hover
+        -->
+    </section>
+
+    <section>
+        <h2>Form</h2>
+        <form>
+            <label>Email (required, invalid if wrong format): 
+                <input type="email" required placeholder="Enter email">
+            </label>
+            <br><br>
+            <label>Password (required): 
+                <input type="password" required placeholder="Enter password">
+            </label>
+            <br><br>
+            <label>
+                <input type="checkbox" name="agree"> I agree
+            </label>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+        <!-- STYLE IDEA:
+             - Invalid inputs: red border
+             - Required inputs: different border or background
+             - Hover button: change background & text color
+             - Checked checkbox: custom border or background
+             - ::placeholder: style placeholder text
+        -->
+    </section>
+
+    <section>
+        <h2>Child Selectors</h2>
+        <main>
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+            <p>Paragraph 3</p>
+            <article>Article 1</article>
+            <article>Article 2</article>
+            <p>Paragraph 4</p>
+        </main>
+        <!-- STYLE IDEA:
+             - first-child: make first paragraph bold/red
+             - nth-child(even): background color for even children
+             - nth-of-type(2) for <p>: different text color
+        -->
+    </section>
+
+    <section>
+        <h2>Pseudo Elements</h2>
+        <article>
+            <p class="p1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel leo quis justo laoreet pretium.
+            </p>
+            <p class="p2">
+                Curabitur luctus orci nec neque euismod, vel ultrices est sodales. Sed tincidunt nunc ut nulla commodo volutpat.
+            </p>
+        </article>
+        <!-- STYLE IDEA:
+             - .p1::first-letter: bigger & different color
+             - .p1::first-line: bold
+             - .p2::first-line: italic
+             - .p2::before / ::after: add quotes or symbols
+        -->
+    </section>
+
+    <section>
+        <h2>Table</h2>
+        <table border="1" cellpadding="5">
+            <tr><th>Name</th><th>Age</th></tr>
+            <tr><td>Alice</td><td>25</td></tr>
+            <tr><td>Bob</td><td>30</td></tr>
+            <tr><td>Charlie</td><td>35</td></tr>
+            <tr><td>Dana</td><td>28</td></tr>
+        </table>
+        <!-- STYLE IDEA:
+             - tr:nth-child(even): light gray background
+             - tr:nth-child(odd): white background
+             - th:hover: highlight column header
+        -->
+    </section>
+
+</body>
+</html>

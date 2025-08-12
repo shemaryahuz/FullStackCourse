@@ -1,0 +1,16 @@
+/* Links */
+
+.links a {
+    text-decoration: none;
+    color: red;
+}
+
+.links a:visited {
+    color: brown;
+    font-weight: 900;
+}
+
+.links a:hover {
+    background-color: rgb(241, 152, 152);
+    text-decoration:overline;
+}

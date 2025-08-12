@@ -1,0 +1,13 @@
+.contact {
+    background: gray;
+}
+
+.contact:hover {
+    background: lightgrey;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: large;
+    }
+}

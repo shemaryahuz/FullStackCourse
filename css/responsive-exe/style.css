@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f172a;
+  color: white;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-green {
+  background: #22c55e;
+  color: white;
+}
+
+.btn-outline {
+  border: 2px solid white;
+  color: white;
+}
+
+.header {
+  background: #0f172a;
+  padding: 20px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.hero {
+  padding: 60px 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.features {
+  display: flex;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.feature-card {
+  flex: 1;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.green { background: #064e3b; }
+.blue { background: #1e3a8a; }
+
+.roadmap {
+  display: flex;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.roadmap-item {
+  flex: 1;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.q1 { background: #059669; }
+.q2 { background: #2563eb; }
+.q3 { background: #facc15; }
+.q4 { background: #dc2626; }
+
+.presale {
+  display: flex;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.presale-card {
+  flex: 1;
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.how-to-buy {
+  display: flex;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.step {
+  flex: 1;
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.footer {
+  background: #0f172a;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hero-content,
+  .features,
+  .roadmap,
+  .presale,
+  .how-to-buy,
+  .coming-content {
+    flex-direction: column;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+  }
+
+  .nav {
+    display: none; /* mobile menu hidden */
+  }
+}

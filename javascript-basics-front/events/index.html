@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: lightblue;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        background-color: blue;
+        color: white;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" />
+      <label for="age">Age:</label>
+      <input type="number" name="age" id="age" />
+      <label for="address">Address:</label>
+      <input type="text" name="address" id="address" />
+
+      <input type="submit" value="Submit" />
+      <button id="btn" type="button">Change Background</button>
+    </form>
+  </body>
+</html>
+
+<script>
+  const btn = document.getElementById("btn");
+  const form = document.getElementById("form");
+  btn.addEventListener("click", () => {
+    // event.preventDefault();
+    if (form.style.backgroundColor === "blue") {
+      btn.innerHTML = "Background Changed";
+      form.style.backgroundColor = "red";
+      document.body.style.backgroundColor = "pink";
+    }
+    else {
+      btn.innerHTML = "Change Background";
+      form.style.backgroundColor = "blue";
+      document.body.style.backgroundColor = "lightblue";
+    }
+  });
+</script>

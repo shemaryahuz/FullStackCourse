@@ -1,0 +1,31 @@
+.profile-card {
+    margin: 1rem;
+    padding: 1rem;
+
+    width: 220px;
+    height: 350px;
+
+    background: whitesmoke;
+    border: 3px outset gray;
+    border-radius: 10px;
+    box-shadow: 2px 2px black;
+}
+
+.avatar {
+    justify-self: center;
+
+    display: block;
+    width: 150px;
+    height: auto;
+
+    border: 2px outset gray;
+    border-radius: 50%;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.description {
+    color: gray;
+}

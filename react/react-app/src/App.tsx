@@ -1,9 +1,13 @@
+import Greeting from "./components/Greeting"
 
 function App() {
 
   return (
     <main>
-      Hello React!
+      <Greeting name="Alice"/>
+      <Greeting name="Bobe"/>
+      <Greeting name="David"/>
+      <Greeting name="Sarah"/>
     </main>
   )
 }

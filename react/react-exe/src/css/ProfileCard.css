@@ -17,8 +17,7 @@
     display: block;
     width: 150px;
     height: auto;
-
-    border: 2px outset gray;
+    
     border-radius: 50%;
 }
 

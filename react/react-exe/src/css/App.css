@@ -3,3 +3,8 @@
 .app {
   font-family: "Roboto", sans-serif;
 }
+
+.cards-container {
+  display: flex;
+  justify-content: space-evenly;
+}

@@ -1,6 +1,6 @@
 # FullStackCourse
 
-Welcome to the **FullStackCourse** repository! This repository follows my journey through a full stack development course. The structure is organized by topics and chapters, and is open for future expansion as I continue to learn and add more material. Each main topic is separated in its own directory, containing lessons, exercises, or project challenges.
+Welcome to the **FullStackCourse** repository! This repository documents my journey through a full stack development course. The structure is organized by key topics, each with its own folder, and is open for future expansion.
 
 > **Note:** The structure and content are a work in progress and will be updated over time. Some directories may be incomplete or expanded in the future.
 
@@ -11,30 +11,27 @@ Welcome to the **FullStackCourse** repository! This repository follows my journe
 ```
 FullStackCourse/
 ├── async-callbacks/
+├── cors/
+├── css/
+├── databases/
 ├── error-handling/
 ├── express-servers/
-│   ├── exercises/
-│   └── lessons/
 ├── fix-challenges/
-│   ├── discount-calculator/
-│   ├── shoping-cart/
-│   ├── temperature-track/
-│   ├── todo-list/
-│   └── user-system/
-├── java-script-basics/
-│   ├── arrs-objs/
-│   ├── functions/
-│   ├── oop/
-│   └── vars-conds-loops/
+├── html/
+├── javascript-basics/
+├── javascript-basics-front/
 ├── modules/
-│   ├── exercises/
-│   └── lessons/
+├── nest.js/
 ├── promises/
+├── react/
+├── security/
+├── testing/
 ├── this/
+├── typescript-basics/
 ├── vanila-servers/
-│   ├── exercises/
-│   └── lessons/
 ├── .gitignore
+├── package.json
+├── package-lock.json
 └── README.md
 ```
 
@@ -42,49 +39,62 @@ FullStackCourse/
 
 ## Topics Overview
 
-Below is a short explanation of each main topic and its purpose:
-
 - **async-callbacks/**  
-  Contains materials on JavaScript asynchronous programming and callbacks.
+  JavaScript asynchronous programming and callbacks.
 
-- **error-handling/**    
-  Cover error handling strategies in JavaScript.
+- **cors/**  
+  Cross-Origin Resource Sharing examples and concepts.
+
+- **css/**  
+  CSS topics and exercises.
+
+- **databases/**  
+  Database-related exercises and lessons.
+
+- **error-handling/**  
+  Error handling strategies in JavaScript.
 
 - **express-servers/**  
-  Contains:
-  - `exercises/` – Practice exercises related to building web servers with Express.js.
-  - `lessons/` – Lesson notes and examples for learning Express.js.
+  Building web servers with Express.js.
 
 - **fix-challenges/**  
-  Real-world coding challenges focusing on debugging and improvements:
-  - `discount-calculator/` – Fix and improve a discount calculator.
-  - `shoping-cart/` – Debug and enhance a shopping cart implementation.
-  - `temperature-track/` – Work on a temperature tracking app logic.
-  - `todo-list/` – Refactor or fix a todo list app.
-  - `user-system/` – User management system challenges.
+  Real-world coding challenges focusing on debugging and improvements.
 
-- **java-script-basics/**  
-  Foundational JavaScript concepts:
-  - `arrs-objs/` – Arrays and objects.
-  - `functions/` – Function syntax and usage.
-  - `oop/` – Object-Oriented Programming basics.
-  - `vars-conds-loops/` – Variables, conditionals, and loops.
+- **html/**  
+  HTML basics and assignments.
+
+- **javascript-basics/**  
+  Foundational JavaScript concepts.
+
+- **javascript-basics-front/**  
+  Front-end JavaScript basics and exercises.
 
 - **modules/**  
-  Learning about modules in JavaScript:
-  - `exercises/` – Hands-on module exercises.
-  - `lessons/` – Theoretical material and examples.
+  Learning about JavaScript modules.
+
+- **nest.js/**  
+  Projects and exercises using the NestJS framework.
 
 - **promises/**  
-  Covers JavaScript Promises for asynchronous programming.
+  JavaScript Promises for asynchronous programming.
 
-- **this/**   
-Dedicated to the `this` keyword in JavaScript.
+- **react/**  
+  React fundamentals and sample projects.
+
+- **security/**  
+  Web security topics and exercises.
+
+- **testing/**  
+  Testing practices and frameworks.
+
+- **this/**  
+  The `this` keyword in JavaScript.
+
+- **typescript-basics/**  
+  TypeScript basics and examples.
 
 - **vanila-servers/**  
-  Building web servers without frameworks:
-  - `exercises/` – Practice assignments.
-  - `lessons/` – Step-by-step lessons.
+  Building web servers without frameworks.
 
 ---
 

@@ -1,28 +1,35 @@
 .profile-card {
     margin: 1rem;
-    padding: 1rem;
+    padding: 1.5rem;
 
     width: 220px;
     height: 350px;
 
-    background: whitesmoke;
-    border: 3px outset gray;
+    background: lightgray;
     border-radius: 10px;
-    box-shadow: 2px 2px black;
+    box-shadow: 0 6px 12px hsla(0, 0%, 0%, 0.12);
+    transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+    box-shadow: 0px 12px 24px hsla(0, 0%, 0%, 2);
+    transform: translateY(-5px);
 }
 
 .avatar {
     justify-self: center;
-
     display: block;
     width: 150px;
     height: auto;
-    
+
     border-radius: 50%;
+
+    box-shadow: 0 10px 18px hsla(0, 0%, 0%, 0.12);
 }
 
 .name {
     font-weight: bold;
+    color: #333;
 }
 
 .description {

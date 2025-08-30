@@ -1,0 +1,13 @@
+.button {
+    justify-self: center;
+    padding: 0.5rem;
+    
+    background-color: #333;
+    color: white;
+
+    border-radius: 0.5rem;
+}
+
+.button:hover {
+    background-color: #666;
+}

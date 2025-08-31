@@ -1,4 +1,4 @@
 # Mood Selector
 
 A Small React Application 
-for Mood Selesctor with button
+for Mood Selesctor with buttons

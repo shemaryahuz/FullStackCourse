@@ -1,9 +1,11 @@
 .profile-card {
-    margin: 1rem;
-    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+    margin: 1rem;
+    padding: 1rem;
     width: 220px;
-    height: 350px;
 
     background: lightgray;
     border-radius: 10px;
@@ -17,10 +19,9 @@
 }
 
 .avatar {
-    justify-self: center;
     display: block;
+    margin: 0 auto;
     width: 150px;
-    height: auto;
 
     border-radius: 50%;
 

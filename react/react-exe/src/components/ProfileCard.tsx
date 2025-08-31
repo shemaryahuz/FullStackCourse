@@ -1,7 +1,7 @@
 import "../css/ProfileCard.css";
 import Button from "./Button";
 
-type PersonType = "Friend" | "Teacher" | "Student";
+export type PersonType = "Friend" | "Teacher" | "Student";
 
 type ProfileCardProps = {
   imageUrl: string;
@@ -25,7 +25,7 @@ export default function ProfileCard(props: ProfileCardProps) {
       <p className="description">
         {props.description}
       </p>
-      <Button />
+      <Button personType={props.personType}/>
     </div>
   )
 }

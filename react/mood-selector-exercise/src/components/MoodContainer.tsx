@@ -67,6 +67,7 @@ export default function MoodContainer() {
         curMood={displayMoods[state.curMood as keyof typeof displayMoods]}
         prevMood={displayMoods[state.prevMood as keyof typeof displayMoods]}
         history={state.history}
+        counts={state.counts}
       />
     </div>
   )

@@ -1,19 +1,18 @@
-import { useState } from 'react'
-import './App.css'
 
+
+import './App.css'
+import MoodContainer from './components/MoodContainer'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1>Mood Selector</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-    </>
+    <div className='app'>
+      <h1 className='heading'>
+        Mood Selector Application
+      </h1>
+      <MoodContainer />
+    </div>
   )
 }
 
 export default App
+

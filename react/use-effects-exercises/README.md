@@ -1,4 +1,4 @@
-# React UseRef Exercises
-Exercises for React useRef() method
+# React UseEffect Exercises
+Exercises for React useEffect() method
 
 

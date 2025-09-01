@@ -3,17 +3,18 @@ type DisplayBoxProps = {
     curMood: string;
     prevMood: string;
     history: string[];
+    counts: Record<string, number>
 }
 
-export default function DisplayBox ({curMood, prevMood, history}: DisplayBoxProps) {
+export default function DisplayBox ({curMood, prevMood, history, counts}: DisplayBoxProps) {
   return (
     <div className="display-box">
-      <section>Current Mood: {curMood}</section>
+      <div>Current Mood: {curMood}</div>
       {prevMood && 
-        <section>Previous Mood: {prevMood}</section>
+        <div>Previous Mood: {prevMood}</div>
       }
       {history.length ?
-        <section>
+        <div>
           History:
           {history.map((mood) => {
               return (
@@ -21,8 +22,17 @@ export default function DisplayBox ({curMood, prevMood, history}: DisplayBoxProp
               )
             })
           }
-        </section>: null
+        </div>: null
       }
+      <div>
+        Counts: 
+        {Object.keys(counts).map((count) => {
+            return (
+              <div>{count}: {counts[count]}</div>
+            )
+          })
+        }
+      </div>
     </div>
   )
 }

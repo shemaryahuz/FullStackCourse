@@ -1,3 +1,4 @@
+import { displayMoods } from "./MoodContainer";
 
 type DisplayBoxProps = {
     curMood: string;
@@ -16,9 +17,9 @@ export default function DisplayBox ({curMood, prevMood, history, counts}: Displa
       {history.length ?
         <div>
           History:
-          {history.map((mood) => {
+          {history.slice(-3).map((mood) => {
               return (
-                <span>{mood} |</span>
+                <span>{displayMoods[mood as keyof typeof displayMoods]}. </span>
               )
             })
           }

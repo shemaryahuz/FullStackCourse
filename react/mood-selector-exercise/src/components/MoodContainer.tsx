@@ -2,7 +2,7 @@ import { useState } from "react";
 import Buttons from "./Buttons"
 import DisplayBox from "./DisplayBox"
 
-const displayMoods = {
+export const displayMoods = {
     neutral: "Neutral 😐",
     happy: "Happy 😀",
     sad: "Sad 😢",
